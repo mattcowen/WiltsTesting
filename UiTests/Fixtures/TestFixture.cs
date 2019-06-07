@@ -16,7 +16,9 @@ namespace UiTests.Fixtures
             //TODO run command docker-compose build
             //TODO run command docker-compose up
             ChromeOptions options = new ChromeOptions();
-            WebDriver = new RemoteWebDriver(new Uri("http://localhost:4444/wd/hub"), options.ToCapabilities());
+            //WebDriver = new RemoteWebDriver(new Uri("http://localhost:4444/wd/hub"), options.ToCapabilities());
+
+            WebDriver = new ChromeDriver(Environment.CurrentDirectory);
 
         }
 
@@ -27,7 +29,16 @@ namespace UiTests.Fixtures
 
         public void Dispose()
         {
-            WebDriver.Dispose();
+            try
+            {
+                WebDriver.Quit();
+                WebDriver.Close();
+            }
+            catch (Exception)
+            {
+
+            }
+
             //TODO run command docker-compose down
         }
     }

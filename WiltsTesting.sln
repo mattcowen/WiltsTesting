@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WiltsTesting", "WiltsTestin
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests", "Tests\UnitTests.csproj", "{8A224685-85D7-4DD9-97E1-00200FC3F20D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UiTests", "UiTests\UiTests.csproj", "{A53F5843-3924-4971-97A6-9C7325BCCFEC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UiTests", "UiTests\UiTests.csproj", "{A53F5843-3924-4971-97A6-9C7325BCCFEC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

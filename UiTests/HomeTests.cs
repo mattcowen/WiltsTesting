@@ -1,6 +1,8 @@
-﻿using OpenQA.Selenium;
+﻿using FluentAssertions;
+using OpenQA.Selenium;
 using System;
 using UiTests.Fixtures;
+using UiTests.PageObjects;
 using Xunit;
 
 namespace UiTests
@@ -17,10 +19,10 @@ namespace UiTests
         [Fact]
         public void LoadHome()
         {
-            fixture.GoTo("http://host.docker.internal");
-            var element = fixture.WebDriver.FindElement(By.TagName("h1"));
+            new HomePage(this.fixture.WebDriver, "http://localhost").EditFirstProduct();
 
-            Assert.Equal("Products", element.Text);
+            new ProductPage(this.fixture.WebDriver).Form.Displayed.Should().BeTrue();
+
         }
     }
 }

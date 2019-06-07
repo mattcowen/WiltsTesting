@@ -29,7 +29,7 @@ namespace Tests
         {
             // Arrange
             var sut = new ProductService();
-
+            
             Assert.Throws<NotImplementedException>(() => sut.DeleteProduct());
         }
     }
